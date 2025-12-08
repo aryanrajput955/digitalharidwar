@@ -102,49 +102,43 @@ export default function ContactUsPage() {
 									<div className='w-12 h-12 bg-linear-to-br from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center text-white'>
 										<Mail className='w-6 h-6' />
 									</div>
-									<div>
-										<h3 className='text-lg font-semibold text-slate-900 mb-1'>
-											Email Us
-										</h3>
-										<p className='text-slate-600'>info@digitalharidwar.com</p>
-										<p className='text-slate-600'>
-											support@digitalharidwar.com
-										</p>
-									</div>
+								<div>
+									<h3 className='text-lg font-semibold text-slate-900 mb-1'>
+										Email Us
+									</h3>
+									<p className='text-slate-600'>yogeshkgangwar@gmail.com</p>
+								</div>
 								</div>
 
 								<div className='flex items-start space-x-4'>
 									<div className='w-12 h-12 bg-linear-to-br from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center text-white'>
 										<Phone className='w-6 h-6' />
 									</div>
-									<div>
-										<h3 className='text-lg font-semibold text-slate-900 mb-1'>
-											Call Us
-										</h3>
-										<p className='text-slate-600'>+91 98765 43210</p>
-										<p className='text-slate-600'>+91 98765 43211</p>
-									</div>
+								<div>
+									<h3 className='text-lg font-semibold text-slate-900 mb-1'>
+										Call Us
+									</h3>
+									<p className='text-slate-600'>+91 82189 11085</p>
+								</div>
 								</div>
 
 								<div className='flex items-start space-x-4'>
 									<div className='w-12 h-12 bg-linear-to-br from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center text-white'>
 										<MapPin className='w-6 h-6' />
-									</div>
-									<div>
-										<h3 className='text-lg font-semibold text-slate-900 mb-1'>
-											Visit Us
-										</h3>
-										<p className='text-slate-600'>
-											123 Digital Street
-											<br />
-											Tech City, TC 12345
-											<br />
-											India
-										</p>
-									</div>
 								</div>
-
-								<div className='flex items-start space-x-4'>
+								<div>
+									<h3 className='text-lg font-semibold text-slate-900 mb-1'>
+										Visit Us
+									</h3>
+									<p className='text-slate-600'>
+										Y4U Ultimate Training Center
+										<br />
+										184, Subhash Nagar, Shankar Ashram, Alankar complex
+										<br />
+										Jwalapur, Haridwar, Uttarakhand - 249407
+									</p>
+								</div>
+							</div>								<div className='flex items-start space-x-4'>
 									<div className='w-12 h-12 bg-linear-to-br from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center text-white'>
 										<Clock className='w-6 h-6' />
 									</div>
@@ -225,11 +219,11 @@ export default function ContactUsPage() {
 												type='tel'
 												id='phone'
 												name='phone'
-												value={formData.phone}
-												onChange={handleChange}
-												className='w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors'
-												placeholder='+91 98765 43210'
-											/>
+											value={formData.phone}
+											onChange={handleChange}
+											className='w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors'
+											placeholder='+91 82189 11085'
+										/>
 										</div>
 										<div>
 											<label
