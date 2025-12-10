@@ -49,7 +49,7 @@ export default function AboutUsPage() {
 			<Navbar />
 
 			{/* Hero Section */}
-			<section className='pt-52 pb-24 px-4 sm:px-6 lg:px-20 bg-linear-to-br from-blue-50 to-cyan-50'>
+			<section className='pt-52 pb-24 px-4 sm:px-6 lg:px-20 bg-linear-to-br from-slate-50 via-blue-50 to-emerald-50/30'>
 				<div className='max-w-7xl mx-auto text-center'>
 					<motion.div
 						initial={{opacity: 0, y: 30}}
@@ -57,7 +57,7 @@ export default function AboutUsPage() {
 						transition={{duration: 0.6}}>
 						<h1 className='text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6'>
 							About{' '}
-							<span className='text-transparent bg-clip-text bg-linear-to-r from-blue-600 to-cyan-500'>
+							<span className='text-transparent bg-clip-text bg-linear-to-r from-blue-600 via-blue-500 to-emerald-500'>
 								Digital Haridwar
 							</span>
 						</h1>
@@ -223,7 +223,7 @@ export default function AboutUsPage() {
 								transition={{duration: 0.6, delay: index * 0.1}}
 								viewport={{once: true}}
 								className='text-center p-6 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow'>
-								<div className='w-16 h-16 bg-linear-to-br from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center mx-auto mb-4 text-white'>
+								<div className='w-16 h-16 bg-linear-to-br from-blue-600 via-blue-500 to-emerald-500 rounded-2xl flex items-center justify-center mx-auto mb-4 text-white'>
 									{value.icon}
 								</div>
 								<h3 className='text-xl font-semibold text-slate-900 mb-2'>
@@ -264,7 +264,7 @@ export default function AboutUsPage() {
 
 							<motion.button
 								whileHover={{scale: 1.05}}
-								className='mt-6 bg-linear-to-r from-blue-600 to-cyan-500 text-white px-6 py-3 sm:px-8 sm:py-3 rounded-xl font-semibold shadow-lg'>
+								className='mt-6 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 sm:px-8 sm:py-3 rounded-xl font-semibold shadow-lg transition-all'>
 								Learn More
 							</motion.button>
 						</motion.div>
@@ -287,7 +287,7 @@ export default function AboutUsPage() {
 									Improve visibility & outrank competitors.
 								</p>
 							</div>
-							<div className='p-4 md:p-6 rounded-xl shadow-xl bg-linear-to-br from-blue-600 to-cyan-500 text-white'>
+							<div className='p-4 md:p-6 rounded-xl shadow-xl bg-linear-to-br from-blue-600 via-blue-500 to-emerald-500 text-white'>
 								<div className='w-8 h-8 md:w-10 md:h-10 flex items-center justify-center rounded-xl mb-3 bg-white/20'>
 									<RefreshCcw className='w-5 h-5 md:w-6 md:h-6' />
 								</div>
@@ -298,7 +298,7 @@ export default function AboutUsPage() {
 									Fix issues affecting performance.
 								</p>
 							</div>
-							<div className='p-4 md:p-6 rounded-xl shadow-xl bg-linear-to-br from-cyan-500 to-blue-600 text-white'>
+							<div className='p-4 md:p-6 rounded-xl shadow-xl bg-linear-to-br from-blue-600 via-blue-500 to-emerald-500 text-white'>
 								<div className='w-8 h-8 md:w-10 md:h-10 flex items-center justify-center rounded-xl mb-3 bg-white/20'>
 									<Layers className='w-5 h-5 md:w-6 md:h-6' />
 								</div>
@@ -326,7 +326,7 @@ export default function AboutUsPage() {
 			</section>
 
 			{/* Stats Section */}
-			<section className='py-16 px-4 sm:px-6 lg:px-20 bg-linear-to-r from-blue-600 to-cyan-500 text-white'>
+			<section className='py-16 px-4 sm:px-6 lg:px-20 bg-blue-600 text-white'>
 				<div className='max-w-7xl mx-auto'>
 					<motion.div
 						initial={{opacity: 0, y: 30}}

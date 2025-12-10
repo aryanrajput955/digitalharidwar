@@ -48,7 +48,7 @@ export default function FAQSection() {
 					</span>
 					<h2 className='text-4xl font-bold mt-4'>
 						Frequently Asked{' '}
-						<span className='text-transparent bg-clip-text bg-linear-to-r from-blue-600 to-cyan-400'>
+						<span className='text-transparent bg-clip-text bg-linear-to-r from-blue-600 via-blue-500 to-emerald-500'>
 							Questions
 						</span>
 					</h2>

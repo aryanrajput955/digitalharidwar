@@ -111,7 +111,7 @@ export default function ContactUsPage() {
 			<Navbar />
 
 			{/* Hero Section */}
-			<section className='pt-40 pb-24 px-4 sm:px-6 lg:px-20 bg-linear-to-br from-blue-50 to-cyan-50'>
+			<section className='pt-40 pb-24 px-4 sm:px-6 lg:px-20 bg-linear-to-br from-slate-50 via-blue-50 to-emerald-50/30'>
 				<div className='max-w-7xl mx-auto text-center'>
 					<motion.div
 						initial={{opacity: 0, y: 30}}
@@ -119,7 +119,7 @@ export default function ContactUsPage() {
 						transition={{duration: 0.6}}>
 						<h1 className='text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6'>
 							Contact{' '}
-							<span className='text-transparent bg-clip-text bg-linear-to-r from-blue-600 to-cyan-500'>
+							<span className='text-transparent bg-clip-text bg-linear-to-r from-blue-600 via-blue-500 to-emerald-500'>
 								Us
 							</span>
 						</h1>
@@ -150,49 +150,49 @@ export default function ContactUsPage() {
 
 							<div className='space-y-6'>
 								<div className='flex items-start space-x-4'>
-									<div className='w-12 h-12 bg-linear-to-br from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center text-white'>
+									<div className='w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center text-white'>
 										<Mail className='w-6 h-6' />
 									</div>
 									<div>
-									<h3 className='text-lg font-semibold text-slate-900 mb-1'>
-										Email Us
-									</h3>
-									<p className='text-slate-600'>yogeshggangwar@gmail.com</p>
+										<h3 className='text-lg font-semibold text-slate-900 mb-1'>
+											Email Us
+										</h3>
+										<p className='text-slate-600'>yogeshggangwar@gmail.com</p>
 									</div>
 								</div>
 
 								<div className='flex items-start space-x-4'>
-									<div className='w-12 h-12 bg-linear-to-br from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center text-white'>
+									<div className='w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center text-white'>
 										<Phone className='w-6 h-6' />
 									</div>
 									<div>
-									<h3 className='text-lg font-semibold text-slate-900 mb-1'>
-										Call Us
-									</h3>
-									<p className='text-slate-600'>+91 82189 11085</p>
+										<h3 className='text-lg font-semibold text-slate-900 mb-1'>
+											Call Us
+										</h3>
+										<p className='text-slate-600'>+91 82189 11085</p>
 									</div>
 								</div>
 
 								<div className='flex items-start space-x-4'>
-									<div className='w-12 h-12 bg-linear-to-br from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center text-white'>
+									<div className='w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center text-white'>
 										<MapPin className='w-6 h-6' />
 									</div>
 									<div>
-									<h3 className='text-lg font-semibold text-slate-900 mb-1'>
-										Visit Us
-									</h3>
-									<p className='text-slate-600'>
-										Y4U Ultimate Training Center
-										<br />
-										184, Subhash Nagar, Shankar Ashram, Alankar complex
-										<br />
-										Jwalapur, Haridwar, Uttarakhand - 249407
-									</p>
+										<h3 className='text-lg font-semibold text-slate-900 mb-1'>
+											Visit Us
+										</h3>
+										<p className='text-slate-600'>
+											Y4U Ultimate Training Center
+											<br />
+											184, Subhash Nagar, Shankar Ashram, Alankar complex
+											<br />
+											Jwalapur, Haridwar, Uttarakhand - 249407
+										</p>
 									</div>
 								</div>
 
 								<div className='flex items-start space-x-4'>
-									<div className='w-12 h-12 bg-linear-to-br from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center text-white'>
+									<div className='w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center text-white'>
 										<Clock className='w-6 h-6' />
 									</div>
 									<div>
@@ -280,15 +280,15 @@ export default function ContactUsPage() {
 												className='block text-sm font-medium text-slate-700 mb-2'>
 												Phone Number
 											</label>
-										<input
-											type='tel'
-											id='phone'
-											name='phone'
-											value={formData.phone}
-											onChange={handleChange}
-											className='w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors'
-											placeholder='+91 82189 11085'
-										/>
+											<input
+												type='tel'
+												id='phone'
+												name='phone'
+												value={formData.phone}
+												onChange={handleChange}
+												className='w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors'
+												placeholder='+91 82189 11085'
+											/>
 										</div>
 										<div>
 											<label
@@ -330,7 +330,7 @@ export default function ContactUsPage() {
 									<button
 										type='submit'
 										disabled={loading}
-										className='w-full bg-linear-to-r from-blue-600 to-cyan-500 text-white py-3 px-6 rounded-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center space-x-2 group disabled:opacity-50 disabled:cursor-not-allowed'>
+										className='w-full bg-blue-600 hover:bg-blue-700 text-white py-3 px-6 rounded-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center space-x-2 group disabled:opacity-50 disabled:cursor-not-allowed'>
 										<span>{loading ? 'Sending...' : 'Send Message'}</span>
 										{!loading && (
 											<Send className='w-5 h-5 group-hover:translate-x-1 transition-transform' />

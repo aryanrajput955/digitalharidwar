@@ -9,7 +9,7 @@ export default function Footer() {
 				{/* Brand Section */}
 				<div>
 					<h2 className='text-2xl font-bold mb-4 text-white flex items-center gap-2'>
-						<span className='text-transparent bg-clip-text bg-linear-to-r from-blue-600 to-cyan-400'>
+						<span className='text-transparent bg-clip-text bg-linear-to-r from-blue-600 via-blue-500 to-emerald-500'>
 							Digital Haridwar
 						</span>
 					</h2>
@@ -138,7 +138,10 @@ export default function Footer() {
 							/>{' '}
 							yogeshggangwar@gmail.com
 						</li>
-						<li>Y4U Ultimate Training Center, 184, Subhash Nagar, Shankar Ashram, Alankar complex, Jwalapur, Haridwar, Uttarakhand - 249407</li>
+						<li>
+							Y4U Ultimate Training Center, 184, Subhash Nagar, Shankar Ashram,
+							Alankar complex, Jwalapur, Haridwar, Uttarakhand - 249407
+						</li>
 					</ul>
 				</div>
 			</div>

@@ -89,7 +89,8 @@ export default function ServicesSection() {
 		<section className='w-full py-20 px-4 sm:px-6 lg:px-12 bg-linear-to-b from-white to-blue-50/30 relative overflow-hidden'>
 			{/* Background decoration */}
 			<div className='absolute top-0 left-0 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl -z-10' />
-			<div className='absolute bottom-0 right-0 w-96 h-96 bg-cyan-500/5 rounded-full blur-3xl -z-10' />
+			<div className='absolute bottom-0 right-0 w-96 h-96 bg-emerald-500/5 rounded-full blur-3xl -z-10' />
+			<div className='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-cyan-500/5 rounded-full blur-3xl -z-10' />
 
 			<div className='max-w-7xl mx-auto'>
 				{/* Heading */}
@@ -129,7 +130,7 @@ export default function ServicesSection() {
 								whileHover={{y: -8, scale: 1.02}}
 								className='group relative bg-white rounded-2xl p-8 shadow-lg border border-slate-100 hover:border-blue-200 transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/10'>
 								{/* Gradient background on hover */}
-								<div className='absolute inset-0 bg-linear-to-br from-blue-50/50 to-cyan-50/50 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300' />
+								<div className='absolute inset-0 bg-linear-to-br from-blue-50/50 via-blue-50/30 to-emerald-50/20 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300' />
 
 								{/* Content */}
 								<div className='relative z-10'>
@@ -148,29 +149,27 @@ export default function ServicesSection() {
 									</h3>
 
 									{/* Points */}
-									<ul className='space-y-2.5'>
-										{service.points.map((p, i) => (
-											<li
-												key={i}
-												className='flex items-start gap-2.5 text-slate-600'>
-												<div className='mt-1.5 w-1.5 h-1.5 rounded-full bg-linear-to-r from-blue-600 to-cyan-400 shrink-0' />
-												<span className='text-sm leading-relaxed'>{p}</span>
-											</li>
-										))}
-									</ul>
-
-									{/* Learn More Link */}
-									<div className='mt-6 pt-4 border-t border-slate-100'>
-										<Link
-											href='/services'
-											className='inline-flex items-center text-sm font-semibold text-blue-600 group-hover:text-blue-700 transition-colors'>
-											<span>Learn More</span>
-											<ChevronRight
-												size={16}
-												className='ml-1 group-hover:translate-x-1 transition-transform'
-											/>
-										</Link>
-									</div>
+										<ul className='space-y-2.5'>
+											{service.points.map((p, i) => (
+												<li
+													key={i}
+													className='flex items-start gap-2.5 text-slate-600'>
+													<div className='mt-1.5 w-1.5 h-1.5 rounded-full bg-linear-to-r from-blue-600 to-emerald-500 shrink-0' />
+													<span className='text-sm leading-relaxed'>{p}</span>
+												</li>
+											))}
+										</ul>										{/* Learn More Link */}
+										<div className='mt-6 pt-4 border-t border-slate-100'>
+											<Link
+												href='/services'
+												className='inline-flex items-center text-sm font-semibold text-blue-600 group-hover:text-blue-700 transition-colors'>
+												<span>Learn More</span>
+												<ChevronRight
+													size={16}
+													className='ml-1 group-hover:translate-x-1 transition-transform'
+												/>
+											</Link>
+										</div>
 								</div>
 							</motion.div>
 						)
@@ -181,7 +180,7 @@ export default function ServicesSection() {
 				<div className='flex justify-center mt-16'>
 					<Link
 						href='/services'
-						className='group inline-flex items-center space-x-2 px-8 py-4 bg-linear-to-r from-blue-600 to-cyan-500 text-white rounded-xl font-semibold shadow-lg hover:shadow-2xl hover:shadow-blue-500/50 hover:scale-105 transition-all duration-300'>
+						className='group inline-flex items-center space-x-2 px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white rounded-xl font-semibold shadow-lg hover:shadow-xl hover:shadow-blue-600/30 transition-all duration-300'>
 						<span>View All Services</span>
 						<ChevronRight
 							size={20}

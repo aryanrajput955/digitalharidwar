@@ -200,7 +200,7 @@ export default function BlogsPage() {
 								name: 'Digital Haridwar',
 								logo: {
 									'@type': 'ImageObject',
-									url: 'https://www.digitalharidwar.com/logo.png',
+									url: 'https://www.digitalharidwar.com/logo_new.png',
 								},
 							},
 							blogPost: blogs.map(blog => ({
@@ -219,7 +219,7 @@ export default function BlogsPage() {
 			/>
 		</Head>
 			<Navbar />			{/* Hero Section */}
-			<section className='pt-40 pb-24 px-4 sm:px-6 lg:px-20 bg-linear-to-br from-blue-50 to-cyan-50'>
+			<section className='pt-40 pb-24 px-4 sm:px-6 lg:px-20 bg-linear-to-br from-slate-50 via-blue-50 to-emerald-50/30'>
 				<div className='max-w-7xl mx-auto text-center'>
 					<motion.div
 						initial={{opacity: 0, y: 30}}
@@ -227,7 +227,7 @@ export default function BlogsPage() {
 						transition={{duration: 0.6}}>
 						<h1 className='text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6'>
 							Our{' '}
-							<span className='text-transparent bg-clip-text bg-linear-to-r from-blue-600 to-cyan-500'>
+							<span className='text-transparent bg-clip-text bg-linear-to-r from-blue-600 via-blue-500 to-emerald-500'>
 								Blogs
 							</span>
 						</h1>

@@ -16,26 +16,24 @@ export default function WhyWeDifferSection() {
 						Exclusive Service
 					</span>
 
-					<h2 className='text-3xl md:text-4xl lg:text-5xl font-bold mt-4 leading-tight'>
-						Outsmart Competitors with
-						<br />
-						<span className='text-transparent bg-clip-text bg-linear-to-r from-blue-600 to-cyan-500'>
-							Google Panda Optimization
-						</span>
-					</h2>
-
-					<p className='text-gray-600 mt-4 text-base md:text-lg leading-relaxed'>
+				<h2 className='text-3xl md:text-4xl lg:text-5xl font-bold mt-4 leading-tight'>
+					Outsmart Competitors with
+					<br />
+					<span className='text-transparent bg-clip-text bg-linear-to-r from-blue-600 via-blue-500 to-emerald-500'>
+						Google Panda Optimization
+					</span>
+				</h2>					<p className='text-gray-600 mt-4 text-base md:text-lg leading-relaxed'>
 						Google Panda focuses on content quality and authenticity. We help
 						businesses achieve higher search rankings by optimizing website
 						content, removing penalties, and creating long-term sustainable SEO
 						growth strategies aligned with Panda's standards.
 					</p>
 
-					<motion.button
-						whileHover={{scale: 1.05}}
-						className='mt-6 bg-linear-to-r from-blue-600 to-cyan-500 text-white px-6 py-3 sm:px-8 sm:py-3 rounded-xl font-semibold shadow-lg'>
-						Learn More
-					</motion.button>
+				<motion.button
+					whileHover={{scale: 1.05}}
+					className='mt-6 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 sm:px-8 sm:py-3 rounded-xl font-semibold shadow-lg transition-all'>
+					Learn More
+				</motion.button>
 				</motion.div>
 
 				{/* RIGHT CARDS SIDE */}
@@ -91,7 +89,7 @@ function Card({
 			whileHover={{scale: 1.04}}
 			className={`p-4 md:p-6 rounded-xl shadow-xl ${
 				gradient
-					? 'bg-linear-to-br from-blue-600 to-cyan-500 text-white'
+					? 'bg-linear-to-br from-blue-600 via-blue-500 to-emerald-500 text-white'
 					: 'bg-white text-gray-800'
 			}`}>
 			<div

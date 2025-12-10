@@ -50,7 +50,7 @@ export const structuredData = {
         '@type': 'Organization',
         name: 'Digital Haridwar',
         url: 'https://www.digitalharidwar.com',
-        logo: 'https://www.digitalharidwar.com/logo.png',
+        logo: 'https://www.digitalharidwar.com/logo_new.png',
         description: siteConfig.description,
         address: {
             '@type': 'PostalAddress',
@@ -86,7 +86,7 @@ export const structuredData = {
         '@context': 'https://schema.org',
         '@type': 'LocalBusiness',
         name: 'Digital Haridwar',
-        image: 'https://www.digitalharidwar.com/logo.png',
+        image: 'https://www.digitalharidwar.com/logo_new.png',
         '@id': 'https://www.digitalharidwar.com',
         url: 'https://www.digitalharidwar.com',
         telephone: '+91-82189-11085',

@@ -37,7 +37,7 @@ export default function BlogsSection() {
 					</span>
 					<h2 className='text-4xl font-bold mt-4'>
 						Our{' '}
-						<span className='text-transparent bg-clip-text bg-linear-to-r from-blue-600 to-cyan-400'>
+						<span className='text-transparent bg-clip-text bg-linear-to-r from-blue-600 via-blue-500 to-emerald-500'>
 							Blogs
 						</span>
 					</h2>
@@ -79,7 +79,7 @@ export default function BlogsSection() {
 				<div className='flex justify-center mt-12'>
 					<Link
 						href='/blogs'
-						className='px-8 py-3 rounded-full bg-linear-to-r from-blue-600 to-cyan-400 text-white font-semibold shadow-xl hover:opacity-90 transition'>
+						className='px-8 py-3 rounded-full bg-blue-600 hover:bg-blue-700 text-white font-semibold shadow-xl transition-all'>
 						View All Blogs
 					</Link>
 				</div>

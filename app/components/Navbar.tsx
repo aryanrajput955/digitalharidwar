@@ -18,16 +18,16 @@ export default function Navbar() {
 
 	return (
 		<nav
-			className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 bg-white/90 backdrop-blur-xl shadow-lg border-b border-blue-100`}>
-			<div className='max-w-7xl mx-auto px-4 pr-7 md:pr-0 sm:px-6 lg:px-0 py-1 flex justify-between items-center'>
+			className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 bg-linear-to-r from-slate-50/95 via-emerald-50/95 to-blue-50/95 backdrop-blur-xl shadow-lg border-b border-emerald-100/50`}>
+			<div className='py-4 max-w-7xl mx-auto px-4 pr-7 md:pr-0 sm:px-6 lg:px-0 flex justify-between items-center'>
 				{/* Logo */}
 				<Link
 					href='/'
 					className='flex items-center gap-2'>
 					<Image
-						src='/logo.png'
+						src='/logo_new.png'
 						alt='logo'
-						width={55}
+						width={75}
 						height={55}
 					/>
 					<span className='font-bold text-xl text-slate-900 tracking-wide'>
@@ -37,7 +37,7 @@ export default function Navbar() {
 
 				{/* Desktop Nav */}
 				<div className='hidden md:flex items-center space-x-10 font-medium text-slate-900'>
-					{['Home', 'About Us', 'Services', 'Blogs'].map((item) => {
+					{['Home', 'Services', 'About Us', 'Blogs'].map((item) => {
 						const href = `/${
 							item === 'Home' ? '' : item.toLowerCase().replace(' ', '')
 						}`
@@ -60,15 +60,15 @@ export default function Navbar() {
 								<span
 									className={`absolute left-0 bottom-[-5px] h-[2.5px] ${
 										isActive ? 'w-full' : 'w-0'
-									} bg-linear-to-r from-blue-400 to-cyan-400 transition-all duration-300 group-hover:w-full`}></span>
+									} bg-linear-to-r from-blue-500 to-emerald-400 transition-all duration-300 group-hover:w-full`}></span>
 							</Link>
 						)
 					})}
 
 					<Link
 						href='/contact'
-						className={`px-5 py-2 bg-linear-to-r from-blue-500 to-cyan-400 text-white font-semibold rounded-full shadow-lg hover:shadow-2xl transition tracking-wide ${
-							pathname.startsWith('/contact') ? 'ring-2 ring-blue-400' : ''
+						className={`px-5 py-2 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold rounded-full shadow-lg hover:shadow-xl transition tracking-wide ${
+							pathname.startsWith('/contact') ? 'ring-2 ring-emerald-400' : ''
 						}`}>
 						Contact Us
 					</Link>
@@ -123,7 +123,7 @@ export default function Navbar() {
 						animate={{opacity: 1, y: 0}}
 						exit={{opacity: 0, y: -10}}
 						transition={{duration: 0.25}}
-						className='md:hidden bg-white/95 text-slate-900 text-center space-y-6 py-6 shadow-xl border-t border-blue-100'>
+						className='md:hidden bg-linear-to-br from-slate-50/98 via-emerald-50/98 to-blue-50/98 backdrop-blur-lg text-slate-900 text-center space-y-6 py-6 shadow-xl border-t border-emerald-100/50'>
 						{['Home', 'About Us', 'Services', 'Blogs', 'Contact Us'].map(
 							(item) => {
 								const href = `/${
