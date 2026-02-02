@@ -14,6 +14,8 @@ export default function ContactUsPage() {
 		subject: '',
 		message: '',
 	})
+	const [loading, setLoading] = useState(false)
+	const [submitMessage, setSubmitMessage] = useState('')
 
 	const handleChange = (
 		e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -24,23 +26,63 @@ export default function ContactUsPage() {
 		})
 	}
 
-	const handleSubmit = (e: React.FormEvent) => {
+	const handleSubmit = async (e: React.FormEvent) => {
 		e.preventDefault()
-		console.log('Form submitted:', formData)
-		alert('Thank you for your message! We will get back to you soon.')
-		setFormData({
-			name: '',
-			email: '',
-			phone: '',
-			subject: '',
-			message: '',
-		})
+
+		// Validate all required fields are filled
+		if (
+			!formData.name.trim() ||
+			!formData.email.trim() ||
+			!formData.subject.trim() ||
+			!formData.message.trim()
+		) {
+			setSubmitMessage('Please fill in all required fields before submitting.')
+			return
+		}
+
+		setLoading(true)
+		setSubmitMessage('')
+
+		try {
+			const response = await fetch('/api/contact', {
+				method: 'POST',
+				headers: {'Content-Type': 'application/json'},
+				body: JSON.stringify({
+					name: formData.name,
+					number: formData.phone || 'Not provided',
+					email: formData.email,
+					message: `Subject: ${formData.subject}\n\n${formData.message}`,
+				}),
+			})
+
+			if (response.ok) {
+				setSubmitMessage(
+					'Thank you! Your message has been sent successfully. Check your email for confirmation.'
+				)
+				setFormData({
+					name: '',
+					email: '',
+					phone: '',
+					subject: '',
+					message: '',
+				})
+			} else {
+				setSubmitMessage('Sorry, something went wrong. Please try again.')
+			}
+		} catch (error) {
+			setSubmitMessage('Sorry, something went wrong. Please try again.')
+		} finally {
+			setLoading(false)
+		}
 	}
 
 	return (
 		<div className='min-h-screen bg-white'>
 			<Head>
-				<title>Contact Us - Get Free Digital Marketing Consultation | Digital Haridwar</title>
+				<title>
+					Contact Us - Get Free Digital Marketing Consultation | Digital
+					Haridwar
+				</title>
 				<meta
 					name='description'
 					content='Contact Digital Haridwar for expert digital marketing services in Haridwar. Get a free consultation for SEO, social media marketing, web design, and more.'
@@ -49,18 +91,27 @@ export default function ContactUsPage() {
 					name='keywords'
 					content='Contact Digital Agency Haridwar, Digital Marketing Consultation, SEO Services Contact, Digital Haridwar Contact, Free Marketing Consultation'
 				/>
-				<meta property='og:title' content='Contact Us - Digital Haridwar' />
+				<meta
+					property='og:title'
+					content='Contact Us - Digital Haridwar'
+				/>
 				<meta
 					property='og:description'
 					content='Get in touch with Digital Haridwar for expert digital marketing services and free consultation.'
 				/>
-				<meta property='og:url' content='https://www.digitalharidwar.com/contact' />
-				<link rel='canonical' href='https://www.digitalharidwar.com/contact' />
+				<meta
+					property='og:url'
+					content='https://www.digitalharidwar.com/contact'
+				/>
+				<link
+					rel='canonical'
+					href='https://www.digitalharidwar.com/contact'
+				/>
 			</Head>
 			<Navbar />
 
 			{/* Hero Section */}
-			<section className='pt-40 pb-24 px-4 sm:px-6 lg:px-20 bg-linear-to-br from-blue-50 to-cyan-50'>
+			<section className='pt-40 pb-24 px-4 sm:px-6 lg:px-20 bg-linear-to-br from-slate-50 via-blue-50 to-emerald-50/30'>
 				<div className='max-w-7xl mx-auto text-center'>
 					<motion.div
 						initial={{opacity: 0, y: 30}}
@@ -68,7 +119,7 @@ export default function ContactUsPage() {
 						transition={{duration: 0.6}}>
 						<h1 className='text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6'>
 							Contact{' '}
-							<span className='text-transparent bg-clip-text bg-linear-to-r from-blue-600 to-cyan-500'>
+							<span className='text-transparent bg-clip-text bg-linear-to-r from-blue-600 via-blue-500 to-emerald-500'>
 								Us
 							</span>
 						</h1>
@@ -99,47 +150,49 @@ export default function ContactUsPage() {
 
 							<div className='space-y-6'>
 								<div className='flex items-start space-x-4'>
-									<div className='w-12 h-12 bg-linear-to-br from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center text-white'>
+									<div className='w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center text-white'>
 										<Mail className='w-6 h-6' />
 									</div>
-								<div>
-									<h3 className='text-lg font-semibold text-slate-900 mb-1'>
-										Email Us
-									</h3>
-									<p className='text-slate-600'>yogeshkgangwar@gmail.com</p>
-								</div>
+									<div>
+										<h3 className='text-lg font-semibold text-slate-900 mb-1'>
+											Email Us
+										</h3>
+										<p className='text-slate-600'>yogeshggangwar@gmail.com</p>
+									</div>
 								</div>
 
 								<div className='flex items-start space-x-4'>
-									<div className='w-12 h-12 bg-linear-to-br from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center text-white'>
+									<div className='w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center text-white'>
 										<Phone className='w-6 h-6' />
 									</div>
-								<div>
-									<h3 className='text-lg font-semibold text-slate-900 mb-1'>
-										Call Us
-									</h3>
-									<p className='text-slate-600'>+91 82189 11085</p>
-								</div>
+									<div>
+										<h3 className='text-lg font-semibold text-slate-900 mb-1'>
+											Call Us
+										</h3>
+										<p className='text-slate-600'>+91 82189 11085</p>
+									</div>
 								</div>
 
 								<div className='flex items-start space-x-4'>
-									<div className='w-12 h-12 bg-linear-to-br from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center text-white'>
+									<div className='w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center text-white'>
 										<MapPin className='w-6 h-6' />
+									</div>
+									<div>
+										<h3 className='text-lg font-semibold text-slate-900 mb-1'>
+											Visit Us
+										</h3>
+										<p className='text-slate-600'>
+											Y4U Ultimate Training Center
+											<br />
+											184, Subhash Nagar, Shankar Ashram, Alankar complex
+											<br />
+											Jwalapur, Haridwar, Uttarakhand - 249407
+										</p>
+									</div>
 								</div>
-								<div>
-									<h3 className='text-lg font-semibold text-slate-900 mb-1'>
-										Visit Us
-									</h3>
-									<p className='text-slate-600'>
-										Y4U Ultimate Training Center
-										<br />
-										184, Subhash Nagar, Shankar Ashram, Alankar complex
-										<br />
-										Jwalapur, Haridwar, Uttarakhand - 249407
-									</p>
-								</div>
-							</div>								<div className='flex items-start space-x-4'>
-									<div className='w-12 h-12 bg-linear-to-br from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center text-white'>
+
+								<div className='flex items-start space-x-4'>
+									<div className='w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center text-white'>
 										<Clock className='w-6 h-6' />
 									</div>
 									<div>
@@ -168,6 +221,18 @@ export default function ContactUsPage() {
 								<h3 className='text-2xl font-bold text-slate-900 mb-6'>
 									Send Us a Message
 								</h3>
+
+								{submitMessage && (
+									<div
+										className={`mb-6 p-4 rounded-lg text-center text-sm font-medium ${
+											submitMessage.includes('Thank you')
+												? 'bg-green-100 text-green-800 border border-green-200'
+												: 'bg-red-100 text-red-800 border border-red-200'
+										}`}>
+										{submitMessage}
+									</div>
+								)}
+
 								<form
 									onSubmit={handleSubmit}
 									className='space-y-6'>
@@ -219,11 +284,11 @@ export default function ContactUsPage() {
 												type='tel'
 												id='phone'
 												name='phone'
-											value={formData.phone}
-											onChange={handleChange}
-											className='w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors'
-											placeholder='+91 82189 11085'
-										/>
+												value={formData.phone}
+												onChange={handleChange}
+												className='w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors'
+												placeholder='+91 82189 11085'
+											/>
 										</div>
 										<div>
 											<label
@@ -264,9 +329,12 @@ export default function ContactUsPage() {
 
 									<button
 										type='submit'
-										className='w-full bg-linear-to-r from-blue-600 to-cyan-500 text-white py-3 px-6 rounded-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center space-x-2 group'>
-										<span>Send Message</span>
-										<Send className='w-5 h-5 group-hover:translate-x-1 transition-transform' />
+										disabled={loading}
+										className='w-full bg-blue-600 hover:bg-blue-700 text-white py-3 px-6 rounded-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center space-x-2 group disabled:opacity-50 disabled:cursor-not-allowed'>
+										<span>{loading ? 'Sending...' : 'Send Message'}</span>
+										{!loading && (
+											<Send className='w-5 h-5 group-hover:translate-x-1 transition-transform' />
+										)}
 									</button>
 								</form>
 							</div>

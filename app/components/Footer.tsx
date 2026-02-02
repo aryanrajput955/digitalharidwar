@@ -127,21 +127,24 @@ export default function Footer() {
 				<div>
 					<h3 className='text-white font-semibold text-lg mb-4'>Contact</h3>
 					<ul className='space-y-3 text-sm'>
-					<li className='flex items-center gap-2'>
-						<Phone
-							size={18}
-							className='text-blue-400'
-						/>{' '}
-						+91 82189 11085
-					</li>
-					<li className='flex items-center gap-2'>
-						<Mail
-							size={18}
-							className='text-blue-400'
-						/>{' '}
-						yogeshkgangwar@gmail.com
-					</li>
-					<li>Y4U Ultimate Training Center, 184, Subhash Nagar, Shankar Ashram, Alankar complex, Jwalapur, Haridwar, Uttarakhand - 249407</li>
+						<li className='flex items-center gap-2'>
+							<Phone
+								size={18}
+								className='text-blue-400'
+							/>{' '}
+							+91 82189 11085
+						</li>
+						<li className='flex items-center gap-2'>
+							<Mail
+								size={18}
+								className='text-blue-400'
+							/>{' '}
+							yogeshggangwar@gmail.com
+						</li>
+						<li>
+							Y4U Ultimate Training Center, 184, Subhash Nagar, Shankar Ashram,
+							Alankar complex, Jwalapur, Haridwar, Uttarakhand - 249407
+						</li>
 					</ul>
 				</div>
 			</div>

@@ -31,6 +31,13 @@ const Hero = () => {
 
 	const handleSubmit = async (e: React.FormEvent) => {
 		e.preventDefault()
+		
+		// Validate all fields are filled
+		if (!formData.name.trim() || !formData.number.trim() || !formData.email.trim() || !formData.message.trim()) {
+			setSubmitMessage('Please fill in all fields before submitting.')
+			return
+		}
+		
 		setLoading(true)
 		setSubmitMessage('')
 		try {
@@ -40,7 +47,7 @@ const Hero = () => {
 				body: JSON.stringify(formData),
 			})
 			if (response.ok) {
-				setSubmitMessage('Thank you! Your message has been sent successfully.')
+				setSubmitMessage('Thank you! Your message has been sent successfully. Check your email for confirmation.')
 				setFormData({name: '', number: '', email: '', message: ''})
 			} else {
 				setSubmitMessage('Sorry, something went wrong. Please try again.')
@@ -61,25 +68,27 @@ const Hero = () => {
 					viewBox='0 0 1920 1080'
 					preserveAspectRatio='xMidYMid slice'
 					xmlns='http://www.w3.org/2000/svg'>
-					<defs>
-						<linearGradient
-							id='grad'
-							x1='0%'
-							y1='0%'
-							x2='100%'
-							y2='100%'>
-							<stop
-								offset='0%'
-								stopColor='#3B82F6'
-							/>
-							<stop
-								offset='100%'
-								stopColor='#06B6D4'
-							/>
-						</linearGradient>
-					</defs>
-
-					<path
+				<defs>
+					<linearGradient
+						id='grad'
+						x1='0%'
+						y1='0%'
+						x2='100%'
+						y2='100%'>
+						<stop
+							offset='0%'
+							stopColor='#3B82F6'
+						/>
+						<stop
+							offset='50%'
+							stopColor='#10B981'
+						/>
+						<stop
+							offset='100%'
+							stopColor='#06B6D4'
+						/>
+					</linearGradient>
+				</defs>					<path
 						d='M0,600 C300,450 600,900 900,750 C1200,600 1500,300 1920,500 L1920,1080 L0,1080 Z'
 						fill='url(#grad)'
 					/>
@@ -106,47 +115,41 @@ const Hero = () => {
 
 				{/* Left Content */}
 				<div className='space-y-8'>
-					<div className='inline-flex items-center space-x-2 px-5 py-2 bg-white/60 backdrop-blur-lg rounded-full border border-slate-200 shadow-md'>
-						<Sparkles
-							className='text-blue-600'
-							size={18}
-						/>
-						<span className='text-sm font-semibold text-blue-700'>
-							Your Digital Growth Partner
-						</span>
-					</div>
-
-					<h1 className='text-4xl md:text-5xl xl:text-6xl font-bold text-slate-900 leading-tight'>
-						Transform Your
-						<span className='block mt-2 bg-linear-to-r from-blue-600 via-cyan-500 to-blue-600 bg-clip-text text-transparent'>
-							Digital Presence
-						</span>
-					</h1>
-
-					<p className='text-lg md:text-xl text-slate-600 leading-relaxed max-w-xl'>
+				<div className='inline-flex items-center space-x-2 px-5 py-2 bg-white/60 backdrop-blur-lg rounded-full border border-blue-200 shadow-md'>
+					<Sparkles
+						className='text-blue-600'
+						size={18}
+					/>
+					<span className='text-sm font-semibold text-blue-700'>
+						Your Digital Growth Partner
+					</span>
+				</div>				<h1 className='text-4xl md:text-5xl xl:text-6xl font-bold text-slate-900 leading-tight'>
+					Transform Your
+					<span className='block mt-2 bg-linear-to-r from-blue-600 via-blue-500 to-emerald-500 bg-clip-text text-transparent'>
+						Digital Presence
+					</span>
+				</h1>					<p className='text-lg md:text-xl text-slate-600 leading-relaxed max-w-xl'>
 						Elevate your brand with our premium digital services — from advanced
 						SEO and conversion-focused websites to strategic branding designed
 						for growth.
 					</p>
 
-					<div className='flex flex-col sm:flex-row gap-4'>
-						<Link href='/services'>
-							<button className='group px-7 py-4 bg-linear-to-r from-blue-600 to-cyan-500 text-white rounded-xl shadow-lg hover:shadow-blue-500/40 hover:scale-105 transition-all duration-300 font-semibold flex items-center justify-center space-x-2'>
-								<span>Explore Services</span>
-								<ChevronRight
-									size={20}
-									className='group-hover:translate-x-1 transition-transform'
-								/>
-							</button>
-						</Link>
-						<Link href='/contact'>
-							<button className='px-7 py-4 bg-white backdrop-blur-md text-slate-700 rounded-xl border-2 border-slate-200 hover:border-blue-500 hover:text-blue-600 shadow-md hover:shadow-lg transition-all duration-300 font-semibold'>
-								Contact Us
-							</button>
-						</Link>
-					</div>
-
-					{/* Trust badges */}
+				<div className='flex flex-col sm:flex-row gap-4'>
+					<Link href='/services'>
+						<button className='group px-7 py-4 bg-blue-600 hover:bg-blue-700 text-white rounded-xl shadow-lg hover:shadow-xl hover:shadow-blue-600/30 transition-all duration-300 font-semibold flex items-center justify-center space-x-2'>
+							<span>Explore Services</span>
+							<ChevronRight
+								size={20}
+								className='group-hover:translate-x-1 transition-transform'
+							/>
+						</button>
+					</Link>
+					<Link href='/contact'>
+						<button className='px-7 py-4 bg-white backdrop-blur-md text-slate-700 rounded-xl border-2 border-slate-200 hover:border-blue-500 hover:text-blue-600 shadow-md hover:shadow-lg transition-all duration-300 font-semibold'>
+							Contact Us
+						</button>
+					</Link>
+				</div>					{/* Trust badges */}
 					<div className='flex items-center gap-6 pt-6'>
 						<div className='flex items-center gap-2 text-sm text-slate-600 font-medium'>
 							<Star
@@ -236,13 +239,13 @@ const Hero = () => {
 								/>
 							</div>
 
-							<button
-								type='submit'
-								disabled={loading}
-								className='w-full py-3 bg-linear-to-r from-blue-600 to-cyan-500 text-white rounded-xl hover:shadow-xl hover:scale-105 transition-all duration-300 font-semibold disabled:opacity-50'>
-								{loading ? 'Submitting...' : 'Submit'}
-							</button>
-						</form>
+					<button
+						type='submit'
+						disabled={loading}
+						className='w-full py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 font-semibold disabled:opacity-50 disabled:cursor-not-allowed'>
+						{loading ? 'Submitting...' : 'Submit'}
+					</button>
+					</form>
 					</div>
 				</div>
 			</div>

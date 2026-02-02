@@ -7,11 +7,12 @@ import CollaborationSection from './components/CollaborationSection'
 import BlogsSection from './components/BlogsSection'
 import Footer from './components/Footer'
 import FAQSection from './components/FAQSection'
-import { Metadata } from 'next'
+import {Metadata} from 'next'
 
 export const metadata: Metadata = {
 	title: 'Digital Haridwar - Best Digital Marketing Agency in Haridwar',
-	description: 'Transform your business with Digital Haridwar - leading digital marketing agency offering SEO, social media marketing, PPC, web design, and branding services in Haridwar.',
+	description:
+		'Transform your business with Digital Haridwar - leading digital marketing agency offering SEO, social media marketing, PPC, web design, and branding services in Haridwar.',
 	keywords: [
 		'Digital Marketing Agency in Haridwar',
 		'Best Digital Agency Haridwar',
@@ -24,7 +25,8 @@ export const metadata: Metadata = {
 	],
 	openGraph: {
 		title: 'Digital Haridwar - Best Digital Marketing Agency in Haridwar',
-		description: 'Transform your business with expert digital marketing services in Haridwar.',
+		description:
+			'Transform your business with expert digital marketing services in Haridwar.',
 		url: 'https://www.digitalharidwar.com',
 	},
 	alternates: {
