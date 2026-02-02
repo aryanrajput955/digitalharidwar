@@ -3,6 +3,7 @@ import Hero from './components/Hero'
 import AboutSection from './components/AboutSection'
 import WhyWeDifferSection from './components/WhyWeDifferSection'
 import ServicesSection from './components/ServicesSection'
+import CollaborationSection from './components/CollaborationSection'
 import BlogsSection from './components/BlogsSection'
 import Footer from './components/Footer'
 import FAQSection from './components/FAQSection'
@@ -36,8 +37,9 @@ export default function Home() {
 		<>
 			<Navbar />
 			<Hero />
-			<AboutSection />
+			<CollaborationSection />
 			<WhyWeDifferSection />
+			<AboutSection />
 			<ServicesSection />
 			<BlogsSection />
 			<FAQSection />

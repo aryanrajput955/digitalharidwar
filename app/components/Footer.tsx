@@ -8,11 +8,14 @@ export default function Footer() {
 			<div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 grid md:grid-cols-4 gap-12'>
 				{/* Brand Section */}
 				<div>
-					<h2 className='text-2xl font-bold mb-4 text-white flex items-center gap-2'>
+					<div className='mb-6'>
+						<img src="/logo2.png" alt="Digital Haridwar" className=" h-16 sm:h-26 w-auto bg-white object-contain" />
+					</div>
+					{/* <h2 className='text-2xl font-bold mb-4 text-white flex items-center gap-2'>
 						<span className='text-transparent bg-clip-text bg-linear-to-r from-blue-600 to-cyan-400'>
 							Digital Haridwar
 						</span>
-					</h2>
+					</h2> */}
 					<p className='text-gray-400 text-sm leading-relaxed'>
 						Empowering businesses with innovative digital solutions. We help
 						brands achieve growth through marketing, development and strategy.

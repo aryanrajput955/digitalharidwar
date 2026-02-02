@@ -23,16 +23,14 @@ export default function Navbar() {
 				{/* Logo */}
 				<Link
 					href='/'
-					className='flex items-center gap-2'>
+					className='flex  items-center gap-2'>
 					<Image
-						src='/logo.png'
+						src='/logo2.png'
+						className=' sm:h-20 h-16 w-auto'
 						alt='logo'
-						width={55}
-						height={55}
+						width={155}
+						height={155}
 					/>
-					<span className='font-bold text-xl text-slate-900 tracking-wide'>
-						Digital Haridwar
-					</span>
 				</Link>
 
 				{/* Desktop Nav */}
