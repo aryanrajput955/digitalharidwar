@@ -53,8 +53,7 @@ export default function TermsAndConditions() {
 						<li>
 							<b>Company</b> (referred to as either &quot;the Company&quot;,
 							&quot;We&quot;, &quot;Us&quot; or &quot;Our&quot; in this
-							Agreement) refers to Digital Haridwar, Y4U ULTIMATE INDUSTRIAL
-							SKILL TRAINING SOLUTIONS PLT LTD Address: 184, Subhash Nagar,
+							Agreement) refers to Digital Haridwar, Address: 184, Subhash Nagar,
 							Shankar Ashram, Alankar complex, Jwalapur, Haridwar, Uttarakhand -
 							249407.
 						</li>

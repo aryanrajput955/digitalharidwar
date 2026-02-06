@@ -1,10 +1,10 @@
 'use client'
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 import Head from 'next/head'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
-import {motion} from 'framer-motion'
-import {Mail, Phone, MapPin, Send, Clock} from 'lucide-react'
+import { motion } from 'framer-motion'
+import { Mail, Phone, MapPin, Send, Clock } from 'lucide-react'
 
 export default function ContactUsPage() {
 	const [formData, setFormData] = useState({
@@ -46,7 +46,7 @@ export default function ContactUsPage() {
 		try {
 			const response = await fetch('/api/contact', {
 				method: 'POST',
-				headers: {'Content-Type': 'application/json'},
+				headers: { 'Content-Type': 'application/json' },
 				body: JSON.stringify({
 					name: formData.name,
 					number: formData.phone || 'Not provided',
@@ -114,9 +114,9 @@ export default function ContactUsPage() {
 			<section className='pt-40 pb-24 px-4 sm:px-6 lg:px-20 bg-linear-to-br from-slate-50 via-blue-50 to-emerald-50/30'>
 				<div className='max-w-7xl mx-auto text-center'>
 					<motion.div
-						initial={{opacity: 0, y: 30}}
-						animate={{opacity: 1, y: 0}}
-						transition={{duration: 0.6}}>
+						initial={{ opacity: 0, y: 30 }}
+						animate={{ opacity: 1, y: 0 }}
+						transition={{ duration: 0.6 }}>
 						<h1 className='text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6'>
 							Contact{' '}
 							<span className='text-transparent bg-clip-text bg-linear-to-r from-blue-600 via-blue-500 to-emerald-500'>
@@ -135,10 +135,10 @@ export default function ContactUsPage() {
 				<div className='max-w-7xl mx-auto'>
 					<div className='grid lg:grid-cols-2 gap-12 lg:gap-16'>
 						<motion.div
-							initial={{opacity: 0, x: -30}}
-							whileInView={{opacity: 1, x: 0}}
-							transition={{duration: 0.6}}
-							viewport={{once: true}}>
+							initial={{ opacity: 0, x: -30 }}
+							whileInView={{ opacity: 1, x: 0 }}
+							transition={{ duration: 0.6 }}
+							viewport={{ once: true }}>
 							<h2 className='text-3xl md:text-4xl font-bold text-slate-900 mb-6'>
 								Get In Touch
 							</h2>
@@ -182,9 +182,9 @@ export default function ContactUsPage() {
 											Visit Us
 										</h3>
 										<p className='text-slate-600'>
-											Y4U Ultimate Training Center
+											Digital Haridwar
 											<br />
-											184, Subhash Nagar, Shankar Ashram, Alankar complex
+											184, Subhash Nagar, Shankar Ashram, Alankar complex,
 											<br />
 											Jwalapur, Haridwar, Uttarakhand - 249407
 										</p>
@@ -213,10 +213,10 @@ export default function ContactUsPage() {
 
 						{/* Contact Form */}
 						<motion.div
-							initial={{opacity: 0, x: 30}}
-							whileInView={{opacity: 1, x: 0}}
-							transition={{duration: 0.6, delay: 0.2}}
-							viewport={{once: true}}>
+							initial={{ opacity: 0, x: 30 }}
+							whileInView={{ opacity: 1, x: 0 }}
+							transition={{ duration: 0.6, delay: 0.2 }}
+							viewport={{ once: true }}>
 							<div className='bg-white p-8 rounded-2xl shadow-xl border border-slate-100'>
 								<h3 className='text-2xl font-bold text-slate-900 mb-6'>
 									Send Us a Message
@@ -224,11 +224,10 @@ export default function ContactUsPage() {
 
 								{submitMessage && (
 									<div
-										className={`mb-6 p-4 rounded-lg text-center text-sm font-medium ${
-											submitMessage.includes('Thank you')
-												? 'bg-green-100 text-green-800 border border-green-200'
-												: 'bg-red-100 text-red-800 border border-red-200'
-										}`}>
+										className={`mb-6 p-4 rounded-lg text-center text-sm font-medium ${submitMessage.includes('Thank you')
+											? 'bg-green-100 text-green-800 border border-green-200'
+											: 'bg-red-100 text-red-800 border border-red-200'
+											}`}>
 										{submitMessage}
 									</div>
 								)}
@@ -340,6 +339,28 @@ export default function ContactUsPage() {
 							</div>
 						</motion.div>
 					</div>
+				</div>
+			</section>
+
+			{/* Map Section */}
+			<section className='pb-16 px-4 sm:px-6 lg:px-20'>
+				<div className='max-w-7xl mx-auto'>
+					<motion.div
+						initial={{ opacity: 0, y: 30 }}
+						whileInView={{ opacity: 1, y: 0 }}
+						transition={{ duration: 0.6 }}
+						viewport={{ once: true }}
+						className='rounded-2xl overflow-hidden shadow-2xl border border-slate-200 h-[400px] md:h-[500px]'>
+						<iframe
+							src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d216.1144251761852!2d78.1068079546094!3d29.926772843747017!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3909497c06b0e089%3A0xca1fd4a6047e693e!2sDigital%20Haridwar!5e0!3m2!1sen!2sin!4v1770376896795!5m2!1sen!2sin'
+							width='100%'
+							height='100%'
+							style={{ border: 0 }}
+							allowFullScreen={true}
+							loading='lazy'
+							referrerPolicy='no-referrer-when-downgrade'
+							className='w-full h-full grayscale-0 hover:grayscale-0 transition-all duration-500'></iframe>
+					</motion.div>
 				</div>
 			</section>
 

@@ -3,7 +3,7 @@ import React from 'react'
 import Head from 'next/head'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
-import {motion} from 'framer-motion'
+import { motion } from 'framer-motion'
 import {
 	Users,
 	Target,
@@ -13,6 +13,7 @@ import {
 	Layers,
 	ShieldCheck,
 } from 'lucide-react'
+import OurTeam from '../components/OurTeam'
 
 export default function AboutUsPage() {
 	return (
@@ -52,9 +53,9 @@ export default function AboutUsPage() {
 			<section className='pt-52 pb-24 px-4 sm:px-6 lg:px-20 bg-linear-to-br from-slate-50 via-blue-50 to-emerald-50/30'>
 				<div className='max-w-7xl mx-auto text-center'>
 					<motion.div
-						initial={{opacity: 0, y: 30}}
-						animate={{opacity: 1, y: 0}}
-						transition={{duration: 0.6}}>
+						initial={{ opacity: 0, y: 30 }}
+						animate={{ opacity: 1, y: 0 }}
+						transition={{ duration: 0.6 }}>
 						<h1 className='text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6'>
 							About{' '}
 							<span className='text-transparent bg-clip-text bg-linear-to-r from-blue-600 via-blue-500 to-emerald-500'>
@@ -75,10 +76,10 @@ export default function AboutUsPage() {
 				<div className='max-w-7xl mx-auto'>
 					<div className='grid lg:grid-cols-2 gap-12 items-center'>
 						<motion.div
-							initial={{opacity: 0, x: -30}}
-							whileInView={{opacity: 1, x: 0}}
-							transition={{duration: 0.6}}
-							viewport={{once: true}}>
+							initial={{ opacity: 0, x: -30 }}
+							whileInView={{ opacity: 1, x: 0 }}
+							transition={{ duration: 0.6 }}
+							viewport={{ once: true }}>
 							<h2 className='text-3xl md:text-4xl font-bold text-slate-900 mb-6'>
 								Our Story
 							</h2>
@@ -98,10 +99,10 @@ export default function AboutUsPage() {
 							</p>
 						</motion.div>
 						<motion.div
-							initial={{opacity: 0, x: 30}}
-							whileInView={{opacity: 1, x: 0}}
-							transition={{duration: 0.6, delay: 0.2}}
-							viewport={{once: true}}
+							initial={{ opacity: 0, x: 30 }}
+							whileInView={{ opacity: 1, x: 0 }}
+							transition={{ duration: 0.6, delay: 0.2 }}
+							viewport={{ once: true }}
 							className='relative'>
 							<div className='rounded-2xl overflow-hidden shadow-2xl'>
 								<img
@@ -116,75 +117,16 @@ export default function AboutUsPage() {
 			</section>
 
 			{/* Our Team Section */}
-			{/* <section className='py-16 px-4 sm:px-6 lg:px-20 bg-slate-50'>
-				<div className='max-w-7xl mx-auto'>
-					<motion.div
-						initial={{opacity: 0, y: 30}}
-						whileInView={{opacity: 1, y: 0}}
-						transition={{duration: 0.6}}
-						viewport={{once: true}}
-						className='text-center mb-12'>
-						<h2 className='text-3xl md:text-4xl font-bold text-slate-900 mb-4'>
-							Meet Our Team
-						</h2>
-						<p className='text-lg text-slate-600 max-w-2xl mx-auto'>
-							The creative minds and strategic thinkers behind your digital
-							success.
-						</p>
-					</motion.div>
-					<div className='grid md:grid-cols-2 lg:grid-cols-3 gap-8'>
-						{[
-							{
-								name: 'Aryan Chauhan',
-								role: 'CEO & Founder',
-								image:
-									'',
-							},
-							{
-								name: 'Aarav Agarwal',
-								role: 'Head of Marketing',
-								image:
-									'https://images.unsplash.com/photo-1494790108755-2616b612b786?w=300&h=300&fit=crop',
-							},
-							{
-								name: 'Palak Singh',
-								role: 'Lead Developer',
-								image:
-									'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&h=300&fit=crop',
-							},
-						].map((member, index) => (
-							<motion.div
-								key={member.name}
-								initial={{opacity: 0, y: 30}}
-								whileInView={{opacity: 1, y: 0}}
-								transition={{duration: 0.6, delay: index * 0.1}}
-								viewport={{once: true}}
-								className='bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-shadow'>
-								<div className='text-center'>
-									<img
-										src={member.image}
-										alt={member.name}
-										className='w-24 h-24 rounded-full mx-auto mb-4 object-cover'
-									/>
-									<h3 className='text-xl font-semibold text-slate-900 mb-1'>
-										{member.name}
-									</h3>
-									<p className='text-slate-600'>{member.role}</p>
-								</div>
-							</motion.div>
-						))}
-					</div>
-				</div>
-			</section> */}
+			<OurTeam />
 
 			{/* Our Values Section */}
 			<section className='py-16 px-4 sm:px-6 lg:px-20'>
 				<div className='max-w-7xl mx-auto'>
 					<motion.div
-						initial={{opacity: 0, y: 30}}
-						whileInView={{opacity: 1, y: 0}}
-						transition={{duration: 0.6}}
-						viewport={{once: true}}
+						initial={{ opacity: 0, y: 30 }}
+						whileInView={{ opacity: 1, y: 0 }}
+						transition={{ duration: 0.6 }}
+						viewport={{ once: true }}
 						className='text-center mb-12'>
 						<h2 className='text-3xl md:text-4xl font-bold text-slate-900 mb-4'>
 							Our Values
@@ -218,10 +160,10 @@ export default function AboutUsPage() {
 						].map((value, index) => (
 							<motion.div
 								key={value.title}
-								initial={{opacity: 0, y: 30}}
-								whileInView={{opacity: 1, y: 0}}
-								transition={{duration: 0.6, delay: index * 0.1}}
-								viewport={{once: true}}
+								initial={{ opacity: 0, y: 30 }}
+								whileInView={{ opacity: 1, y: 0 }}
+								transition={{ duration: 0.6, delay: index * 0.1 }}
+								viewport={{ once: true }}
 								className='text-center p-6 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow'>
 								<div className='w-16 h-16 bg-linear-to-br from-blue-600 via-blue-500 to-emerald-500 rounded-2xl flex items-center justify-center mx-auto mb-4 text-white'>
 									{value.icon}
@@ -242,10 +184,10 @@ export default function AboutUsPage() {
 					<div className='grid lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center'>
 						{/* LEFT TEXT SIDE */}
 						<motion.div
-							initial={{opacity: 0, x: -30}}
-							whileInView={{opacity: 1, x: 0}}
-							transition={{duration: 0.6}}
-							viewport={{once: true}}>
+							initial={{ opacity: 0, x: -30 }}
+							whileInView={{ opacity: 1, x: 0 }}
+							transition={{ duration: 0.6 }}
+							viewport={{ once: true }}>
 							<span className='px-4 py-1 rounded-full bg-blue-50 text-blue-600 text-sm font-semibold'>
 								Exclusive Service
 							</span>
@@ -263,7 +205,7 @@ export default function AboutUsPage() {
 							</p>
 
 							<motion.button
-								whileHover={{scale: 1.05}}
+								whileHover={{ scale: 1.05 }}
 								className='mt-6 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 sm:px-8 sm:py-3 rounded-xl font-semibold shadow-lg transition-all'>
 								Learn More
 							</motion.button>
@@ -271,10 +213,10 @@ export default function AboutUsPage() {
 
 						{/* RIGHT CARDS SIDE */}
 						<motion.div
-							initial={{opacity: 0, x: 30}}
-							whileInView={{opacity: 1, x: 0}}
-							transition={{duration: 0.6, delay: 0.15}}
-							viewport={{once: true}}
+							initial={{ opacity: 0, x: 30 }}
+							whileInView={{ opacity: 1, x: 0 }}
+							transition={{ duration: 0.6, delay: 0.15 }}
+							viewport={{ once: true }}
 							className='grid grid-cols-1 sm:grid-cols-2 gap-4'>
 							<div className='p-4 md:p-6 rounded-xl shadow-xl bg-white text-gray-800'>
 								<div className='w-8 h-8 md:w-10 md:h-10 flex items-center justify-center rounded-xl mb-3 bg-blue-50 text-blue-600'>
@@ -329,10 +271,10 @@ export default function AboutUsPage() {
 			<section className='py-16 px-4 sm:px-6 lg:px-20 bg-blue-600 text-white'>
 				<div className='max-w-7xl mx-auto'>
 					<motion.div
-						initial={{opacity: 0, y: 30}}
-						whileInView={{opacity: 1, y: 0}}
-						transition={{duration: 0.6}}
-						viewport={{once: true}}
+						initial={{ opacity: 0, y: 30 }}
+						whileInView={{ opacity: 1, y: 0 }}
+						transition={{ duration: 0.6 }}
+						viewport={{ once: true }}
 						className='text-center mb-12'>
 						<h2 className='text-3xl md:text-4xl font-bold mb-4'>Our Impact</h2>
 						<p className='text-lg opacity-90 max-w-2xl mx-auto'>
@@ -341,17 +283,17 @@ export default function AboutUsPage() {
 					</motion.div>
 					<div className='grid grid-cols-2 lg:grid-cols-4 gap-8'>
 						{[
-							{number: '150+', label: 'Happy Clients'},
-							{number: '500+', label: 'Projects Completed'},
-							{number: '98%', label: 'Success Rate'},
-							{number: '5+', label: 'Years Experience'},
+							{ number: '150+', label: 'Happy Clients' },
+							{ number: '500+', label: 'Projects Completed' },
+							{ number: '98%', label: 'Success Rate' },
+							{ number: '5+', label: 'Years Experience' },
 						].map((stat, index) => (
 							<motion.div
 								key={stat.label}
-								initial={{opacity: 0, scale: 0.8}}
-								whileInView={{opacity: 1, scale: 1}}
-								transition={{duration: 0.6, delay: index * 0.1}}
-								viewport={{once: true}}
+								initial={{ opacity: 0, scale: 0.8 }}
+								whileInView={{ opacity: 1, scale: 1 }}
+								transition={{ duration: 0.6, delay: index * 0.1 }}
+								viewport={{ once: true }}
 								className='text-center'>
 								<div className='text-4xl md:text-5xl font-bold mb-2'>
 									{stat.number}

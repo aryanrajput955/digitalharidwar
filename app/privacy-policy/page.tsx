@@ -62,8 +62,7 @@ export default function PrivacyPolicy() {
 						</li>
 						<li>
 							<b>Company</b> (referred to as either "the Company", "We", "Us" or
-							"Our" in this Agreement) refers to Digital Haridwar, Y4U ULTIMATE
-							INDUSTRIAL SKILL TRAINING SOLUTIONS PLT LTD Address: 184, Subhash
+							"Our" in this Agreement) refers to Digital Haridwar, Address: 184, Subhash
 							Nagar, Shankar Ashram, Alankar complex, Jwalapur, Haridwar,
 							Uttarakhand - 249407.
 						</li>

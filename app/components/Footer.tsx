@@ -1,6 +1,6 @@
 'use client'
 import Link from 'next/link'
-import {Facebook, Instagram, Linkedin, Mail, Phone} from 'lucide-react'
+import { Facebook, Instagram, Linkedin, Mail, Phone, MapPin } from 'lucide-react'
 
 export default function Footer() {
 	return (
@@ -141,9 +141,15 @@ export default function Footer() {
 							/>{' '}
 							yogeshggangwar@gmail.com
 						</li>
-						<li>
-							Y4U Ultimate Training Center, 184, Subhash Nagar, Shankar Ashram,
-							Alankar complex, Jwalapur, Haridwar, Uttarakhand - 249407
+						<li className='flex items-start gap-2'>
+							<MapPin
+								size={18}
+								className='text-blue-400 mt-1 shrink-0'
+							/>
+							<span>
+								Digital Haridwar, 184, Subhash Nagar, Shankar Ashram, Alankar complex,
+								Jwalapur, Haridwar, Uttarakhand - 249407
+							</span>
 						</li>
 					</ul>
 				</div>
