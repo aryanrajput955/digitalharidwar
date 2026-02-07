@@ -1,6 +1,83 @@
 import React from 'react'
 
 const OurTeam = () => {
+    const teamMembers = [
+        {
+            id: 1,
+            name: 'Mr Yogesh Gangwar',
+            designation: 'CEO',
+            image: '/our_team/img1.jpg',
+        },
+        {
+            id: 9,
+            name: 'Geeta Gangwar',
+            designation: 'CEO',
+            image: '/our_team/img9.JPeG',
+        },
+            {
+            id: 5,
+            name: 'Mr Manik Bansal',
+            designation: 'IT Consultant',
+            image: '/our_team/img5.jpg',
+        },
+        {
+            id: 2,
+            name: 'Mr Suresh Mohan',
+            designation: 'Marketing Executive',
+            image: '/our_team/img2.jpg',
+        },
+     
+        {
+            id: 3,
+            name: 'Mr Gopal Chaturvedi',
+            designation: 'Legal Consultant',
+            image: '/our_team/img3.jpg',
+        },
+        {
+            id: 4,
+            name: 'Aryan Rajput',
+            designation: 'Full Stack Developer',
+            image: '/our_team/img4.jpg',
+        },
+    
+        {
+            id: 6,
+            name: 'Mr Vineet ',
+            designation: 'Marketing head Pan India',
+            image: '/our_team/img6.jpeg',
+        },
+        {
+            id: 7,
+            name: 'V4U GROUP UK INDIA ',
+            designation: 'Professional recruitment team',
+            image: '/our_team/img7.JPG',
+        },
+        {
+            id: 8,
+            name: 'Mr Amardeep Robin ',
+            designation: 'Office management head',
+            image: '/our_team/img8.jpg',
+        },
+        {
+            id: 10,
+            name: 'Ishant Gangwar',
+            designation: 'IT department cyber security',
+            image: '/our_team/img10.JPG',
+        },
+        {
+            id: 11,
+            name: 'Mr Dhanesh Chandra Tiwari',
+            designation: 'Office coordinator',
+            image: '/our_team/img11.JPeG',
+        },
+        {
+            id: 12,
+            name: 'Shivam Sharma ',
+            designation: 'B2B industrial marketing officer',
+            image: '/our_team/img12.JPG',
+        },
+    ]
+
     return (
         <section className='py-16 md:py-24 bg-white'>
             <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -28,20 +105,28 @@ const OurTeam = () => {
                 </div>
 
                 <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-8'>
-                    {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12].map((num) => (
+                    {teamMembers.map((member) => (
                         <div
-                            key={num}
-                            className='group relative overflow-hidden rounded-2xl bg-white border border-slate-200 shadow-md hover:shadow-2xl transition-all duration-300 hover:-translate-y-2'>
+                            key={member.id}
+                            className='group relative overflow-hidden rounded-2xl bg-white border border-slate-200 shadow-md hover:shadow-2xl transition-all duration-300 hover:-translate-y-2'
+                        >
                             <div className='aspect-square overflow-hidden'>
                                 <img
-                                    src={`/our_team/img${num}.${num >= 6 && num <= 7 ? 'JPG' : num >= 10 ? 'JPG' : 'jpg'}`}
-                                    alt={`Team member ${num}`}
+                                    src={member.image}
+                                    alt={member.name}
                                     className='w-full h-full object-cover group-hover:scale-110 transition-transform duration-500'
                                 />
                             </div>
-                            <div className='absolute inset-0 bg-linear-to-t from-slate-900/80 via-slate-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300'></div>
-                            <div className='absolute bottom-0 left-0 right-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300'>
-                                <div className='w-10 h-1 bg-linear-to-r from-emerald-500 to-blue-500 rounded-full mb-2'></div>
+                            <div className='absolute inset-0 bg-linear-to-t from-slate-900/90 via-slate-900/40 to-transparent opacity-100 md:opacity-0 group-hover:opacity-100 transition-opacity duration-300'>
+                                <div className='absolute bottom-0 left-0 right-0 p-3 md:p-6 translate-y-0 md:translate-y-4 group-hover:translate-y-0 transition-transform duration-300'>
+                                    <div className='hidden md:block w-12 h-1 bg-linear-to-r from-emerald-500 to-blue-500 rounded-full mb-3'></div>
+                                    <h3 className='text-xs md:text-xl font-bold text-white mb-0.5 md:mb-1'>
+                                        {member.name}
+                                    </h3>
+                                    <p className='text-[9px] md:text-sm text-emerald-300 font-medium uppercase tracking-wider line-clamp-1'>
+                                        {member.designation}
+                                    </p>
+                                </div>
                             </div>
                         </div>
                     ))}
