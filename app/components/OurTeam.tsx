@@ -12,7 +12,7 @@ const OurTeam = () => {
             id: 9,
             name: 'Geeta Gangwar',
             designation: 'CEO',
-            image: '/our_team/img9.JPeG',
+            image: '/our_team/img9.jpeg',
         },
             {
             id: 5,
@@ -68,7 +68,7 @@ const OurTeam = () => {
             id: 11,
             name: 'Mr Dhanesh Chandra Tiwari',
             designation: 'Office coordinator',
-            image: '/our_team/img11.JPeG',
+            image: '/our_team/img11.jpeg',
         },
         {
             id: 12,
